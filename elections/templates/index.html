@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+{% load static %}
+{% load embed_video_tags %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>JKUSA</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons-->
+  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+{% load static %}  <!-- Load assets files -->
+
+<a href="{% url 'index' %}" class="logo d-flex align-items-center me-0 ms-0">
+    <img src="{% static 'img/jkuat-logo.jpeg' %}" alt="JKUAT Logo" class="logo-img">
+    <h1 class="sitename ms-2">JKUSA</h1><span>.</span>
+</a>
+
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{%url 'index' %}#hero" class="active">Home</a></li>
+          <li><a href="{%url 'index' %}#about">About</a></li>
+          <li><a href="{%url 'index' %}#portfolio">Video Content</a></li>
+           <li><a href="{%url 'index' %}#features">Adverts</a></li>
+          <li><a href="{% url 'blog' %}">Blog</a></li>
+          <li><a href="{%url 'index' %}#contact">Contact Us</a>
+
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="{% static 'img/Gate-A.jpg' %}" alt="" data-aos="fade-in">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10">
+            <h2 data-aos="fade-up" data-aos-delay="100">Welcome to JKUSA Election Website</h2>
+            <p data-aos="fade-up" data-aos-delay="200">The Jomo Kenyatta University Students Association (JKUSA) serves as the official student governing body at Jomo Kenyatta University of Agriculture and Technology (JKUAT). Established to represent and advocate for the interests of the student community.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-xl-center gy-5">
+
+          <div class="col-xl-5 content">
+            <h3>About Us</h3>
+            <h2>JKUSA Elections</h2>
+            <p>Elections are a fundamental aspect of JKUSA's operations, ensuring democratic representation within the student body. The electoral process is structured to promote fairness and active student participation.Currently, there exists one unified Student Government with branches in the various campuses of the University: Every bona de student of the university is a member of the JKUSA by virtue of their enrolment in the university</p>
+            <a href="https://discover.jkuat.ac.ke/tag/elections/" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
+          <div class="col-xl-7">
+            <div class="row gy-4 icon-boxes">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box">
+                  <i class="bi bi-command"></i>
+                  <h3>Election Process</h3>
+                  <p>The elections are conducted in phases, beginning with the selection of delegates and congress representatives from each department. These representatives then participate in electing the main student council, ensuring a comprehensive representation of the student populace</p>
+                </div>
+              </div> <!-- End Icon Box -->
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-box">
+                  <i class="bi bi-buildings"></i>
+                  <h3>Electoral Commission</h3>
+                  <p>To oversee the elections, an Electoral Commission was established. Notably, there is an extension of the application deadline for commission positions to encourage broader student involvement.</p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box">
+                  <i class="bi bi-clipboard-pulse"></i>
+                  <h3>Student Elections</h3>
+                  <p>The office of the Dean of Students coordinates and oversees the elections for the Student Governing body.</p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon-box">
+                  <i class="bi bi-graph-up-arrow"></i>
+                  <h3>Election Timeline</h3>
+                  <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /About Section -->
+
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Advertisements</h2>
+        <p>Find what you need when you need it</p>
+      </div><!-- End Section Title -->
+      <div class="container">
+  {% for ad in ads %}
+  <div class="row gx-2 gy-1 align-items-center features-item">
+    <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+      <h3>{{ ad.title }}</h3>
+      <p>{{ ad.text }}</p>
+    </div>
+
+    <!-- Ad Media -->
+    <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+      {% if ad.image and ad.video %}
+      <!-- If both exist, stack them -->
+      <div class="image-stack" onclick="swapMedia(this)">
+        <video controls class="stack-back ad-video" style="max-width: 100%; max-height: 250px; object-fit: cover;">
+          <source src="{{ ad.video }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <img src="{{ ad.image}}" alt="{{ ad.title }}" class="stack-front img-fluid ad-image">
+      </div>
+
+      {% elif ad.video %}
+      <!-- If only video exists -->
+      <video controls class="ad-video" style="max-width: 100%; max-height: 250px; object-fit: cover;">
+        <source src="{{ ad.video }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      {% elif ad.image %}
+      <!-- If only image exists -->
+      <img src="{{ ad.image.url }}" alt="{{ ad.title }}" class="img-fluid ad-image" style="max-width: 100%; max-height: 250px; object-fit: cover;">
+      {% endif %}
+    </div>
+  </div>
+{% endfor %}
+</div>
+      <script>
+  function swapMedia(container) {
+    let image = container.querySelector(".ad-image");
+    let video = container.querySelector(".ad-video");
+
+    if (image && video) {
+      image.classList.toggle("stack-front");
+      video.classList.toggle("stack-front");
+    }
+  }
+</script>
+
+    </section><!-- /advertisement Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Video Content</h2>
+        <p></p>
+      </div><!-- End Section Title -->
+      <div class="container">
+  <div class="row gy-4"> <!-- Adds spacing between videos -->
+
+    {% for item in videos %}
+      <div class="col-lg-4 col-md-6">
+        <div class="portfolio-info">
+
+          <!-- Video Embed -->
+          <div class="ratio ratio-16x9 mb-3">
+            {% video item.video_url as my_video %}
+            <iframe src="{{ my_video.url }}" frameborder="0" allowfullscreen></iframe>
+            {% endvideo %}
+          </div>
+
+          <!-- Toggle Transcript Button -->
+          {% if item.transcript %}
+          <button class="transcript-btn" onclick="toggleTranscript('transcriptid')">
+            Show Transcript
+          </button>
+
+          <!-- Hidden Transcript -->
+          <p id="transcriptid" class="video-transcript hidden">
+            {{ item.transcript }}
+          </p>
+          {% endif %}
+
+        </div>
+      </div>
+    {% endfor %}
+
+  </div><!-- End row -->
+</div><!-- End container -->
+
+      <script>
+  function toggleTranscript(id) {
+    let transcript = document.getElementById(id);
+    if (transcript.classList.contains("hidden")) {
+      transcript.classList.remove("hidden");
+    } else {
+      transcript.classList.add("hidden");
+    }
+  }
+</script>
+
+    </section><!-- /Portfolio Section -->
+
+
+    <!-- Recent Posts Section -->
+   <section id="recent-posts" class="recent-posts section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Recent Posts</h2>
+    <p>The latest event and upcoming events from JKUSA Elections</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+    <div class="row gy-4"> <!-- Bootstrap row with spacing -->
+
+      {% for recent_post in recent_posts %}
+      <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <article>
+
+          <div class="post-img">
+            {% if recent_post.image %}
+            <img src="{{ recent_post.image.url }}" alt="{{ recent_post.name }}" class="img-fluid">
+            {% endif %}
+            {% if recent_post.gif %}
+            <img src="{{ recent_post.gif.url }}" alt="{{ recent_post.name }}" class="img-fluid">
+            {% endif %}
+          </div>
+
+          <p class="post-category">{{ recent_post.name }}</p>
+
+          <h2 class="title">
+            <p class="text-wrap text-break blog-text">{{ recent_post.about }}</p>
+          </h2>
+
+          <div class="d-flex align-items-center">
+            <time datetime="{{ recent_post.date }}">{{ recent_post.date }}</time>
+          </div>
+
+        </article>
+      </div> <!-- End single post item -->
+      {% endfor %}
+
+    </div><!-- End row -->
+  </div><!-- End container -->
+</section>
+<!-- /Recent Posts Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section" >
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Get in-touch with us via the following channels</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-10">
+
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="200">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Address</h3>
+                  <p>Jomo Kenyatta University of Agriculture and Technology (JKUAT)</p>
+                  <p>P. O. Box 62000 – 00100 Nairobi – Kenya</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="300">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Call Us</h3>
+                  <p>067-5870001, 067-5870002</p>
+                  <p>067-5870003, 067-5870004</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="400">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>dos@aa.jkuat.ac.ke</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="500">
+                  <i class="bi bi-clock"></i>
+                  <h3>Open Hours</h3>
+                  <p>Monday - Friday</p>
+                  <p>8:00AM - 05:00PM</p>
+                </div>
+              </div><!-- End Info Item -->
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="{%url 'index' %}" class="logo d-flex align-items-center">
+            <span class="sitename">JKUSA</span>
+          </a>
+          <p>Jomo Kenyatta University Student Association</p>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+             <li><a href="{%url 'index' %}#hero" class="active">Home</a></li>
+          <li><a href="{%url 'index' %}#about">About</a></li>
+           <li><a href="{%url 'index' %}#features">Adverts</a></li>
+            <li><a href="{%url 'blog' %}">Blogss</a></li>
+
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>Jomo Kenyatta University of Agriculture and Technology (JKUAT)</p>
+          <p>P. O. Box 62000 – 00100 Nairobi – Kenya</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>067-5870001</span></p>
+          <p><strong>Email:</strong> <span>dos@aa.jkuat.ac.ke</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="sitename">JKUSA</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+
+        Designed by <a href="https://github.com/Nyambu001/">Nyash</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
