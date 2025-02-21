@@ -203,32 +203,32 @@
       </div><!-- End Section Title -->
       <div class="container">
   <div class="row gy-4"> <!-- Adds spacing between videos -->
+{% for item in videos %}
+  <div class="col-lg-4 col-md-6">
+    <div class="portfolio-info">
 
-    {% for item in videos %}
-      <div class="col-lg-4 col-md-6">
-        <div class="portfolio-info">
-
-          <!-- Video Embed -->
-          <div class="ratio ratio-16x9 mb-3">
-            {% video item.video_url as my_video %}
-            <iframe src="{{ my_video.url }}" frameborder="0" allowfullscreen></iframe>
-            {% endvideo %}
-          </div>
-
-          <!-- Toggle Transcript Button -->
-          {% if item.transcript %}
-          <button class="transcript-btn" onclick="toggleTranscript('transcriptid')">
-            Show Transcript
-          </button>
-
-          <!-- Hidden Transcript -->
-          <p id="transcriptid" class="video-transcript hidden">
-            {{ item.transcript }}
-          </p>
-          {% endif %}
-
-        </div>
+      <!-- Video Embed -->
+      <div class="ratio ratio-16x9 mb-3">
+        {% video item.video_url as my_video %}
+          <iframe src="{{ my_video.url }}" frameborder="0" allowfullscreen></iframe>
+        {% endvideo %}
       </div>
+
+      <!-- Toggle Transcript Button -->
+      {% if item.transcript %}
+      <button class="transcript-btn" onclick="toggleTranscript('transcript-{{ item.id }}')">
+        Show Transcript
+      </button>
+
+      <!-- Hidden Transcript -->
+      <p id="transcript-{{ item.id }}" class="video-transcript hidden">
+        {{ item.transcript }}
+      </p>
+      {% endif %}
+
+    </div>
+  </div>
+
     {% endfor %}
 
   </div><!-- End row -->
