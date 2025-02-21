@@ -37,9 +37,11 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-      <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto me-xl-0">
-        <h1 class="sitename">JKUSA</h1><span>.</span>
-      </a>
+
+<a href="{% url 'index' %}" class="logo d-flex align-items-center me-0 ms-0">
+    <img src="{% static 'img/jkuat-logo.jpeg' %}" alt="JKUAT Logo" class="logo-img">
+    <h1 class="sitename ms-2">JKUSA</h1><span>.</span>
+</a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
