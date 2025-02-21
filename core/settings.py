@@ -38,7 +38,7 @@ SECRET_KEY = os.getenv('DJANGO_SECURITY_KEY','django-insecure-m=6v^lht3gc26_=3b%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = ['elections-b2ia.onrender.com','127.0.0.1','localhost']
 
 
 # Application definition
