@@ -2825,7 +2825,7 @@ iframe {
 
 .transcript-btn {
   position: relative;
-  bottom: 20px;
+  bottom: 5px;
   left: 10px;
   z-index: 10;
   display: block;
