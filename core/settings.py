@@ -136,7 +136,7 @@ USE_TZ = True
 STATIC_URL = '/assets/'
 STATICFILES_DIRS = [BASE_DIR / "assets"]  # Your assets files directory
 STATIC_ROOT = BASE_DIR / "staticfiles"  # Where collectstatic will copy files
-STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFileStorage'
+STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
