@@ -1260,7 +1260,7 @@ section,
 
 .portfolio .portfolio-item .portfolio-info {
   opacity: 0;
-  position: relative;
+  position: absolute;
   left: 12px;
   right: 12px;
   bottom: -100%;
@@ -2824,7 +2824,7 @@ iframe {
 }
 
 .transcript-btn {
-  position: absolute;
+  position: relative;
   bottom: 10px;
   left: 10px;
   z-index: 10;
