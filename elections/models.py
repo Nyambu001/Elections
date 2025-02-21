@@ -3,6 +3,7 @@ from django.core.exceptions import ValidationError
 from embed_video.fields import EmbedVideoField
 import cloudinary.uploader
 
+
 class YouTubeVideo(models.Model):
     video_url = EmbedVideoField()
     transcript = models.TextField(blank=True, null=True)
@@ -10,6 +11,7 @@ class YouTubeVideo(models.Model):
 
     def __str__(self):
         return self.video_url
+
 
 class Blog(models.Model):
     name = models.CharField(max_length=200, null=True)
