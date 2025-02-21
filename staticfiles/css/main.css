@@ -2824,6 +2824,8 @@ iframe {
 }
 
 .transcript-btn {
+  position: relative;
+  z-index: 10;
   display: block;
   margin: 10px auto;
   background-color: #28a745;
@@ -2836,7 +2838,7 @@ iframe {
 }
 
 .transcript-btn:hover {
-  background-color: #0056b3;
+  background-color: #28a745;
 }
 
 
