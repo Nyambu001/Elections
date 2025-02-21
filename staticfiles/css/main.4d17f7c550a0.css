@@ -2846,13 +2846,6 @@ iframe {
 
 .video-transcript{
   margin-top: 10px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-height: 200px;
-  overflow-y: auto;
   background-color: #f8f9fa;
   padding: 10px;
   border-radius: 5px;

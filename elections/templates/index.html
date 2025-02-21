@@ -36,6 +36,7 @@
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+{% load static %}  <!-- Load assets files -->
 
 <a href="{% url 'index' %}" class="logo d-flex align-items-center me-0 ms-0">
     <img src="{% static 'img/jkuat-logo.jpeg' %}" alt="JKUAT Logo" class="logo-img">
@@ -178,17 +179,7 @@
   </div>
 {% endfor %}
 </div>
-      <script>
-  function swapMedia(container) {
-    let image = container.querySelector(".ad-image");
-    let video = container.querySelector(".ad-video");
 
-    if (image && video) {
-      image.classList.toggle("stack-front");
-      video.classList.toggle("stack-front");
-    }
-  }
-</script>
 
     </section><!-- /advertisement Section -->
 
@@ -202,37 +193,47 @@
       </div><!-- End Section Title -->
       <div class="container">
   <div class="row gy-4"> <!-- Adds spacing between videos -->
-{% for item in videos %}
-  <div class="col-lg-4 col-md-6">
-    <div class="portfolio-info">
 
-      <!-- Video Embed -->
-      <div class="ratio ratio-16x9 mb-3">
-        {% video item.video_url as my_video %}
-          <iframe src="{{ my_video.url }}?wmode=transparent" frameborder="0" allowfullscreen></iframe>
-        {% endvideo %}
+    {% for item in videos %}
+      <div class="col-lg-4 col-md-6"> <!-- 3 videos per row on large screens, 2 on medium -->
+        <div class="portfolio-info">
+
+          <!-- Video Embed -->
+          <div class="ratio ratio-16x9 mb-3">
+            {% video item.video_url as my_video %}
+            <iframe src="{{ my_video.url }}" frameborder="0" allowfullscreen></iframe>
+            {% endvideo %}
+          </div>
+
+          <!-- Toggle Transcript Button -->
+          {% if item.transcript %}
+          <button class="transcript-btn" onclick="toggleTranscript('transcript-{{item.id}}')">
+            Show Transcript
+          </button>
+
+          <!-- Hidden Transcript -->
+          <p id="transcript-{{item.id}}" class="video-transcript hidden">
+            {{ item.transcript }}
+          </p>
+          {% endif %}
+
+        </div>
       </div>
-
-      <!-- Toggle Transcript Button -->
-      {% if item.transcript %}
-      <button class="transcript-btn" onclick="toggleTranscript('transcript-{{ item.id }}')">
-        Show Transcript
-      </button>
-
-      <!-- Hidden Transcript -->
-      <p id="transcript-{{ item.id }}" class="video-transcript hidden">
-        {{ item.transcript }}
-      </p>
-      {% endif %}
-
-    </div>
-  </div>
-
     {% endfor %}
 
   </div><!-- End row -->
 </div><!-- End container -->
 
+      <script>
+  function toggleTranscript(id) {
+    let transcript = document.getElementById(id);
+    if (transcript.classList.contains("hidden")) {
+      transcript.classList.remove("hidden");
+    } else {
+      transcript.classList.add("hidden");
+    }
+  }
+</script>
 
     </section><!-- /Portfolio Section -->
 
@@ -379,7 +380,7 @@
       <p>© <span>Copyright</span> <strong class="sitename">JKUSA</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
 
-        Designed by <a href="www.linkedin.com/in/irene-irungu-918076255">Nyash</a>
+        Designed by <a href="https://github.com/Nyambu001/">Nyash</a>
       </div>
     </div>
 
@@ -403,15 +404,17 @@
 
   <!-- Main JS File -->
   <script src="{% static 'js/main.js' %}"></script>
+   <script>
+  function swapMedia(container) {
+    let image = container.querySelector(".ad-image");
+    let video = container.querySelector(".ad-video");
 
-  <script>
-  function toggleTranscript(id) {
-    let transcript = document.getElementById(id);
-    transcript.classList.toggle("hidden")) {
-
+    if (image && video) {
+      image.classList.toggle("stack-front");
+      video.classList.toggle("stack-front");
     }
   }
-  </script>
+</script>
 
 </body>
 
