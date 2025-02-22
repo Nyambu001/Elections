@@ -33,31 +33,31 @@
 
 <body class="blog-page">
 
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+  <a href="{% url 'index' %}" class="logo d-flex align-items-center me-0 ms-0">
+      <img src="{% static 'img/jkuat-logo.jpeg' %}" alt="JKUAT Logo" class="logo-img">
+      <h1 class="sitename ms-2">JKUSA</h1><span>.</span>
+  </a>
 
 
-<a href="{% url 'index' %}" class="logo d-flex align-items-center me-0 ms-0">
-    <img src="{% static 'img/jkuat-logo.jpeg' %}" alt="JKUAT Logo" class="logo-img">
-    <h1 class="sitename ms-2">JKUSA</h1><span>.</span>
-</a>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="{%url 'index' %}#hero" class="active">Home</a></li>
+            <li><a href="{%url 'index' %}#about">About</a></li>
+            <li><a href="{%url 'index' %}#portfolio">Video Content</a></li>
+             <li><a href="{%url 'index' %}#features">Adverts</a></li>
+            <li><a href="{% url 'blog' %}">Blog</a></li>
+            <li><a href="{%url 'index' %}#contact">Contact Us</a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="{%url 'index' %}#hero" class="active">Home</a></li>
-          <li><a href="{%url 'index' %}#about">About</a></li>
-          <li><a href="{%url 'index' %}#portfolio">Portfolio</a></li>
-          <li><a href="{%url 'index' %}#features">Adverts</a></li>
-          <li><a href="{%url 'blog' %}">Blog</a></li>
+            </li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
 
-          </li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-    </div>
-  </header>
+      </div>
+    </header>
 
   <main class="main">
 
