@@ -15,12 +15,16 @@ import os
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+import environ
+
+env = environ.Env()
+environ.Env.read_env()
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME':"dzublvarb",
-    'API_KEY': "394236438371982",
-    'API_SECRET': "ZAu4zZz-MlkGTGl-7r2ydqQwxgc",
-    'RESOURCE_TYPE': 'auto',
+    'CLOUD_NAME':env('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY':env("CLOUDINARY_API_KEY"),
+    'API_SECRET':env("CLOUDINARY_API_SECRET"),
+
 }
 cloudinary.config(
     cloud_name =CLOUDINARY_STORAGE['CLOUD_NAME'],
