@@ -1615,6 +1615,7 @@ section,
   object-fit: cover; /* Crops the image while preserving aspect ratio */
 }
 .blog-posts .blog-gif{
+  height: 240px;
   width: auto;
   object-fit: cover;
 }

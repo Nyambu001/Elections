@@ -1331,7 +1331,7 @@ section,
 }
 
 .recent-posts .post-img {
-  height: 500px; /* Fixed height */
+  height: 400px; /* Fixed height */
   width: 100%; /* Ensures it takes full container width */
   display: flex; /* Enables alignment */
   justify-content: center; /* Centers image */
@@ -1344,7 +1344,11 @@ section,
   width: auto; /* Maintains aspect ratio */
   object-fit: cover; /* Crops the image while preserving aspect ratio */
 }
-
+.recent-posts .blog-gif{
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
 
 .recent-posts .post-category {
   font-size: 16px;
@@ -1615,8 +1619,9 @@ section,
   object-fit: cover; /* Crops the image while preserving aspect ratio */
 }
 .blog-posts .blog-gif{
+  height: 100%;
   width: auto;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .blog-posts .post-category {

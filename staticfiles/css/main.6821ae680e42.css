@@ -1331,20 +1331,11 @@ section,
 }
 
 .recent-posts .post-img {
-  height: 500px; /* Fixed height */
-  width: 100%; /* Ensures it takes full container width */
-  display: flex; /* Enables alignment */
-  justify-content: center; /* Centers image */
-  align-items: center; /* Centers image */
-  overflow: hidden; /* Hides overflowing content */
+  max-height: auto;
+  width: auto;
+  margin:0 auto;
+  overflow: hidden;
 }
-
-.recent-posts .post-img  .blog-img{
-  height: 100%; /* Ensures image takes full height */
-  width: auto; /* Maintains aspect ratio */
-  object-fit: cover; /* Crops the image while preserving aspect ratio */
-}
-
 
 .recent-posts .post-category {
   font-size: 16px;
@@ -1601,22 +1592,10 @@ section,
 }
 
 .blog-posts .post-img {
-  height: 400px; /* Fixed height */
-  width: 100%; /* Ensures it takes full container width */
-  display: flex; /* Enables alignment */
-  justify-content: center; /* Centers image */
-  align-items: center; /* Centers image */
-  overflow: hidden; /* Hides overflowing content */
-}
-
-.blog-posts .post-img  .blog-img{
-  height: 100%; /* Ensures image takes full height */
-  width: auto; /* Maintains aspect ratio */
-  object-fit: cover; /* Crops the image while preserving aspect ratio */
-}
-.blog-posts .blog-gif{
-  width: auto;
-  object-fit: cover;
+  max-height: auto;
+  width: 100%
+  margin:0;
+  overflow: hidden;
 }
 
 .blog-posts .post-category {
@@ -2261,4 +2240,9 @@ iframe {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
-
+ .blog-image{
+  height: 75%;
+  width: 75%
+  align: center;
+  margin: auto;
+ }
