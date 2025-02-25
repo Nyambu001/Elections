@@ -15,9 +15,8 @@ import os
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
-
-
-
+from dotenv import load_dotenv
+load_dotenv()
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME':os.getenv('CLOUDINARY_CLOUD_NAME'),
     'API_KEY':os.getenv("CLOUDINARY_API_KEY"),
