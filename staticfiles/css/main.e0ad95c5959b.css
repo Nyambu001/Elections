@@ -1333,7 +1333,7 @@ section,
 .recent-posts .post-img {
   max-height: auto;
   width: 100%;
-  margin:0 auto;
+  margin:0;
   overflow: hidden;
 }
 

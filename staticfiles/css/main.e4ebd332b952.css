@@ -1333,7 +1333,7 @@ section,
 .recent-posts .post-img {
   max-height: auto;
   width: 100%;
-  margin:0 auto;
+  margin: -30px -30px 15px -30px;
   overflow: hidden;
 }
 
@@ -1594,7 +1594,7 @@ section,
 .blog-posts .post-img {
   max-height: auto;
   width: 100%
-  margin:0;
+  margin: -30px -30px 15px -30px;
   overflow: hidden;
 }
 

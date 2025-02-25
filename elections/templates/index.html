@@ -38,7 +38,7 @@
       <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
   <a href="{% url 'index' %}" class="logo d-flex align-items-center me-0 ms-0">
-      <img src="{% static 'img/jkuat-logo.jpeg' %}" alt="JKUAT Logo" class="logo-img">
+      <img src="{% static 'img/jkusalogo.png' %}" alt="JKUSa Logo" class="logo-img">
       <h1 class="sitename ms-2">JKUSA</h1><span>.</span>
   </a>
 
@@ -160,7 +160,7 @@
             <source src="{{ ad.video }}" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <img src="{{ ad.image}}" alt="{{ ad.title }}" class="stack-front img-fluid ad-image">
+          <img src="{{ ad.image}}" alt="{{ ad.title }}" style ="max-width: 100%; max-height: 250px; object-fit: cover;" class="stack-front img-fluid ad-image">
         </div>
 
         {% elif ad.video %}
@@ -172,7 +172,7 @@
 
         {% elif ad.image %}
         <!-- If only image exists -->
-        <img src="{{ ad.image.url }}" alt="{{ ad.title }}" class="img-fluid ad-image" style="max-width: 100%; max-height: 250px; object-fit: cover;">
+        <img src="{{ ad.image}}" alt="{{ ad.title }}" class="img-fluid ad-image" style="max-width: 100%; max-height: 250px; object-fit: cover;">
         {% endif %}
       </div>
     </div>
@@ -351,6 +351,8 @@
               <span class="sitename">JKUSA</span>
             </a>
             <p>Jomo Kenyatta University Student Association</p>
+             <img src="{% static 'img/jkusalogo.png' %}" alt="JKUSA Logo" class="logo-img">
+             <img src="{% static 'img/jkuat-logo.jpeg' %}" alt="JKUAT Logo" class="logo-img" style="height: 150px">
           </div>
 
           <div class="col-lg-2 col-6 footer-links">

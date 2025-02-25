@@ -2,6 +2,8 @@ from django.db import models
 from django.core.exceptions import ValidationError
 from embed_video.fields import EmbedVideoField
 import cloudinary.uploader
+import cloudinary
+import cloudinary.api
 
 
 class YouTubeVideo(models.Model):
@@ -15,7 +17,7 @@ class YouTubeVideo(models.Model):
 
 class Blog(models.Model):
     name = models.CharField(max_length=200, null=True)
-    about = models.CharField(max_length=200, null=True)
+    about = models.CharField(max_length=450, null=True)
     image = models.ImageField(null=True, blank=True)
     gif = models.ImageField(null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
@@ -40,14 +42,14 @@ class Advertisement(models.Model):
 
     def save(self,*args, **kwargs):
         if self.image:
-            upload_result= cloudinary.uploader.upload(self.image)
-            self.image = upload_result['secure_url']
+            upload_result=cloudinary.uploader.upload(self.image)
+            self.image =upload_result['secure_url']
 
         if self.video:
-            upload_result= cloudinary.uploader.upload(self.video, resource_type='video')
-            self.video = upload_result['secure_url']
+            upload_result=cloudinary.uploader.upload(self.video, resource_type='video')
+            self.video =upload_result['secure_url']
 
-            super().save(*args,**kwargs)
+        super().save(*args,**kwargs)
 
 
 
